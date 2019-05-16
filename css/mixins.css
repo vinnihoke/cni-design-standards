@@ -1,0 +1,10 @@
+.flex-row-c {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flex-column-c {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}

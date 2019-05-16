@@ -1,0 +1,25 @@
+@import 'variables.less';
+
+.flex-row-c {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.flex-column-c {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.custom-font(@color, @font-size){
+    color: @color;
+    font-size: @font-size;
+}
+
+.flex(@flow: row wrap, @justify: center, @center: center){
+    display: flex;
+    flex-flow: @flow;
+    justify-content: @justify;
+    align-items: @center;
+}
