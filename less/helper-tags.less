@@ -14,11 +14,26 @@ h2 {
 }
 
 h3 {
-    .custom-font(@primary, 2.2rem);
+    .custom-font(@primary, 4rem);
+    font-weight: 800;
     line-height: 4rem;
+}
+
+h4 {
+    .custom-font(@primary, 2.2rem);
 }
 
 p {
     .custom-font(white, 1.5rem);
     line-height: 2rem;
+}
+
+a{
+    .custom-font(@darkgrey, 1.5rem);
+    transition: 500ms;
+    line-height: 2rem;
+
+&:hover{
+    color: crimson;
+}
 }
