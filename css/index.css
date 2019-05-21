@@ -8,6 +8,26 @@
   flex-flow: column;
   align-items: center;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(max-content, auto);
+  width: 100%;
+  grid-template-areas: "a" "b" "c" "d";
+  align-items: flex-start;
+}
+@media (min-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(max-content, auto);
+    width: 100%;
+    grid-template-areas: "a b" "a b" "a c" "a c" "a d" "a d";
+    align-items: flex-start;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -165,6 +185,7 @@ p {
   color: white;
   font-size: 1.5rem;
   line-height: 2rem;
+  padding-top: 10px;
 }
 a {
   color: #333333;
@@ -175,8 +196,8 @@ a {
 a:hover {
   color: crimson;
 }
-.container {
-  width: 100%;
+.container > * {
+  max-width: 1200px;
 }
 header {
   display: flex;
@@ -274,20 +295,41 @@ header .logo img {
   padding: 15px 0px;
 }
 .card-container .collect-cards {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(max-content, auto);
+  width: 100%;
+  grid-template-areas: "a" "b" "c" "d";
+  align-items: flex-start;
+}
+@media (min-width: 900px) {
+  .card-container .collect-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(max-content, auto);
+    width: 100%;
+    grid-template-areas: "a b" "a b" "a c" "a c" "a d" "a d";
+    align-items: flex-start;
+  }
 }
 .card-container .card {
-  width: 500px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   margin: 15px;
   padding: 15px 5px;
   border-top: 1px solid black;
+}
+.card-container .card:nth-child(1) {
+  grid-area: a;
+}
+.card-container .card:nth-child(2) {
+  grid-area: b;
+}
+.card-container .card:nth-child(3) {
+  grid-area: c;
+}
+.card-container .card:nth-child(4) {
+  grid-area: d;
 }
 .card-container .card .card-content p {
   color: black;
@@ -319,25 +361,9 @@ header .logo img {
   font-size: 80px;
 }
 .card-container .card .card-content-permission .content {
-  width: 80%;
+  width: 75%;
 }
 .card-container .card .card-content-permission p {
   color: black;
   font-size: 1.5rem;
-}
-.card-container .card-half {
-  width: 500px;
-  margin: 15px;
-  padding: 15px 5px;
-  border-top: 1px solid black;
-}
-.card-container .card-content-resources {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-}
-.card-container .card-content-resources ul {
-  width: 100%;
 }
