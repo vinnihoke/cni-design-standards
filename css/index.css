@@ -181,6 +181,11 @@ h4 {
   color: #4a3695;
   font-size: 2.2rem;
 }
+h5 {
+  color: black;
+  font-size: 1.7rem;
+  padding-top: 15px;
+}
 p {
   color: white;
   font-size: 1.5rem;
@@ -195,6 +200,10 @@ a {
 }
 a:hover {
   color: crimson;
+}
+strong {
+  font-size: inherit;
+  font-weight: 700;
 }
 .container > * {
   max-width: 1200px;
@@ -241,6 +250,7 @@ header .logo img {
   align-items: center;
   width: 100%;
   background-color: #F8F8F8;
+  padding: 15px;
 }
 .steps-content {
   display: flex;
@@ -285,9 +295,11 @@ header .logo img {
 }
 .fonts {
   box-shadow: 0px 0px 10px 10px #F8F8F8;
+  max-width: 100%;
 }
 .card-container {
   width: 100%;
+  max-width: 1200px;
   padding: 30px 0px;
 }
 .card-container .section-divider {
@@ -335,11 +347,28 @@ header .logo img {
   color: black;
   font-size: 1.5rem;
 }
-.card-container .card .card-content .img {
+.card-container .card .card-content .img-files {
   width: 100%;
-  height: 220px;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://bit.ly/2WNEnFt');
-  background-size: 100%;
+  height: 250px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url('https://bit.ly/2WNEnFt');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-container .card .card-content .img-fonts {
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url('https://bit.ly/2QjAUvJ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-container .card .card-content .img-colors {
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url('https://images.unsplash.com/photo-1500042600524-37ecb686c775?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80');
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .card-container .card .card-content-permission {
@@ -357,7 +386,7 @@ header .logo img {
   width: 20%;
 }
 .card-container .card .card-content-permission .warning .icon {
-  color: #4a3695;
+  color: orangered;
   font-size: 80px;
 }
 .card-container .card .card-content-permission .content {
