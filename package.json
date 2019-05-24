@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "firebase-tools": "^6.10.0",
     "global": "^4.3.2",
     "less": "^3.9.0",
     "less-watch-compiler": "^1.13.0"
